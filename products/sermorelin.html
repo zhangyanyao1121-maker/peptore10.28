@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Sermorelin | Peptore</title>
+
+  <meta name="description" content="Sermorelin research peptide supply by Peptore.">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS -->
+  <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="../assets/vendor/aos/aos.css" rel="stylesheet">
+
+  <!-- Main CSS -->
+  <link href="../assets/css/main.css" rel="stylesheet">
+
+  <!-- 详情页额外样式 -->
+  <style>
+    .product-detail {
+      padding: 60px 0;
+      background: #f5f7fa;
+      min-height: 100vh;
+    }
+
+    .product-detail-card {
+      background: #ffffff;
+      border-radius: 20px;
+      padding: 40px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+      border: 1px solid #f0f0f0;
+    }
+
+    .product-detail-image {
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+      border: 1px solid #f0f0f0;
+      background: #ffffff;
+      max-width: 500px;
+      margin: 0 auto;
+    }
+
+    .product-detail-image img {
+      width: 100%;
+      height: auto;
+      display: block;
+      transition: transform 0.3s ease;
+    }
+
+    .product-detail-image:hover img {
+      transform: scale(1.02);
+    }
+
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: #6c757d;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 500;
+      transition: color 0.3s ease;
+      margin-bottom: 16px;
+    }
+
+    .back-link:hover {
+      color: #0d6efd;
+    }
+
+    .product-title {
+      font-size: 32px;
+      font-weight: 700;
+      color: #1a1a1a;
+      margin-bottom: 8px;
+    }
+
+    .product-subtitle {
+      font-size: 15px;
+      color: #6c757d;
+      margin-bottom: 12px;
+    }
+
+    .product-info-text {
+      font-size: 15px;
+      color: #6c757d;
+      margin-bottom: 16px;
+      line-height: 1.8;
+    }
+
+    .product-info-text strong {
+      color: #1a1a1a;
+    }
+
+    .size-selector {
+      margin-bottom: 20px;
+    }
+
+    .size-selector label {
+      font-weight: 600;
+      font-size: 15px;
+      color: #1a1a1a;
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    .size-selector select {
+      max-width: 320px;
+      padding: 12px 16px;
+      border-radius: 12px;
+      border: 2px solid #e9ecef;
+      font-weight: 500;
+      font-size: 15px;
+      background: #f8f9fa;
+      transition: border-color 0.3s ease;
+      appearance: none;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%236c757d' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 16px center;
+    }
+
+    .size-selector select:focus {
+      border-color: #0d6efd;
+      outline: none;
+      background-color: #fff;
+    }
+
+    .product-price {
+      font-size: 32px;
+      font-weight: 700;
+      color: #0d6efd;
+      margin-bottom: 24px;
+    }
+
+    .product-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .btn-whatsapp {
+      background: #25D366;
+      color: #fff;
+      border-radius: 50px;
+      padding: 14px 32px;
+      font-weight: 600;
+      font-size: 15px;
+      border: none;
+      transition: all 0.3s ease;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .btn-whatsapp:hover {
+      background: #1da851;
+      color: #fff;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(37, 211, 102, 0.35);
+    }
+
+    .footer-custom {
+      background: #ffffff;
+      padding: 40px 0;
+      border-top: 1px solid #e9ecef;
+      margin-top: 0;
+    }
+
+    .footer-custom h4 {
+      font-weight: 700;
+      color: #1a1a1a;
+      margin-bottom: 8px;
+    }
+
+    .footer-custom p {
+      color: #6c757d;
+      font-size: 14px;
+      margin-bottom: 12px;
+    }
+
+    .footer-custom .copyright {
+      font-size: 13px;
+      color: #adb5bd;
+    }
+
+    @media (max-width: 768px) {
+      .product-detail {
+        padding: 30px 0;
+      }
+      .product-detail-card {
+        padding: 20px;
+      }
+      .product-title {
+        font-size: 26px;
+      }
+      .product-price {
+        font-size: 26px;
+      }
+      .product-buttons {
+        flex-direction: column;
+      }
+      .btn-whatsapp {
+        justify-content: center;
+      }
+      .product-detail-image {
+        max-width: 100%;
+      }
+    }
+
+    @media (min-width: 992px) {
+      .product-detail-image {
+        max-width: 450px;
+      }
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header id="header" class="header d-flex align-items-center sticky-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center">
+
+      <a href="../index.html" class="logo d-flex align-items-center me-auto">
+        <h1 class="sitename">Peptore</h1>
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="../index.html#hero">Home</a></li>
+          <li><a href="../index.html#about">About</a></li>
+          <li><a href="../index.html#products">Products</a></li>
+          <li><a href="../index.html#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <a class="btn-getstarted" href="https://wa.me/message/S7NIOS2OEXCWM1">
+        Request Quote
+      </a>
+
+    </div>
+  </header>
+
+  <!-- ===== PRODUCT DETAIL ===== -->
+  <section class="section product-detail">
+
+    <div class="container">
+
+      <div class="product-detail-card">
+
+        <div class="row align-items-start gy-5">
+
+          <!-- ===== 图片 ===== -->
+          <div class="col-lg-6">
+            <div class="product-detail-image">
+              <img src="../assets/img/portfolio/product-7.png" alt="Sermorelin">
+            </div>
+          </div>
+
+          <!-- ===== 信息 ===== -->
+          <div class="col-lg-6">
+
+            <!-- 返回 -->
+            <a href="../index.html#products" class="back-link">
+              <i class="bi bi-arrow-left"></i> Back to Products
+            </a>
+
+            <!-- 标题 -->
+            <h1 class="product-title">Sermorelin</h1>
+            <p class="product-subtitle">Research Use Only | High Purity Sermorelin Peptide Supply</p>
+
+            <!-- 文字信息 -->
+            <p class="product-info-text">
+              <strong>99% Standard</strong> | <strong>COA Available</strong> | <strong>Worldwide Shipping</strong><br>
+              Standard Shipping Fee: $60 (Up to 3 Boxes Included)
+            </p>
+
+            <!-- 规格选择 -->
+            <div class="size-selector">
+              <label for="sizeSelect">Select Size</label>
+              <select id="sizeSelect" onchange="updatePrice()">
+                <option value="75">5mg × 10 Vials — $75</option>
+                <option value="95">7mg × 10 Vials — $95</option>
+                <option value="116">10mg × 10 Vials — $116</option>
+              </select>
+            </div>
+
+            <!-- 价格 -->
+            <div class="product-price" id="price">$75</div>
+
+            <!-- 按钮（只有WhatsApp） -->
+            <div class="product-buttons">
+              <a href="https://wa.me/message/S7NIOS2OEXCWM1" target="_blank" class="btn-whatsapp">
+                <i class="bi bi-whatsapp"></i> Contact Us to Order
+              </a>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer-custom">
+    <div class="container text-center">
+      <h4>Peptore</h4>
+      <p>Premium peptide supply platform for global customers.</p>
+      <div class="copyright">© Copyright Peptore. All Rights Reserved.</div>
+    </div>
+  </footer>
+
+  <!-- ===== SCRIPTS ===== -->
+  <script>
+    function updatePrice() {
+      let select = document.getElementById("sizeSelect");
+      document.getElementById("price").innerHTML = "$" + select.value;
+    }
+  </script>
+
+  <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../assets/js/main.js"></script>
+
+</body>
+
+</html>
